@@ -14,7 +14,6 @@ def index():
     upcoming_movie = get_movies('upcoming')
     now_showing_movie = get_movies('now_playing')
 
-
     return render_template('index.html',
         title = title,
         popular = popular_movies,
@@ -23,10 +22,13 @@ def index():
     )
 
 
+
 @app.route('/movie/<int:movie_id>/')
 def movie(movie_id):
-
 
     return render_template('movie.html',
         id = movie_id
     )
+
+
+
